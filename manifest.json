@@ -1,6 +1,30 @@
 {
     "name": "Chrome Extension Example",
     "version": "1.0",
-    "description": "Build an Extension",
-    "manifest_version": 2
+    "description": "Learning to build an extension",
+    "manifest_version": 2,
+    "author": "Nawaz Hussain K",
+    "background": {
+        "scripts":[
+            "js/background.js"
+        ],
+        "persistent":false
+    },
+    "page_action": {
+        "default_popup": "html/popup.html",
+        "default_icon": {
+            "16": "images/img16.png",
+            "32": "images/img32.png",
+            "48": "images/img48.png",
+            "128": "images/img128.png"
+        }
+    },
+    "options_page": "html/options.html",
+    "icons": {
+        "16": "images/img16.png",
+        "32": "images/img32.png",
+        "48": "images/img48.png",
+        "128": "images/img128.png"
+    },
+    "permissions": ["declarativeContent","activeTab","storage"]
 }
